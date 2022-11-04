@@ -1,0 +1,20 @@
+server {
+    listen 80;
+    listen [::]:80;
+    
+    listen 443 ssl;
+	listen [::]:443 ssl;
+    ssl_certificate /etc/letsencrypt/live/brego.com.ar/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/brego.com.ar/privkey.pem;
+
+    server_name brego.com.ar;
+   
+    location / {
+        root /home/brego_page/web;
+        index  index.html;
+    }
+    
+    location ~* \.(js|jpg|png|css)$ {
+        root /home/brego_page/web;
+    }
+} 
