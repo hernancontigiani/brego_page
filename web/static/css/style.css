@@ -78,6 +78,14 @@ main {
   gap: 10px;
 }
 
+#bregoImg {
+  max-width: 450px;
+}
+
+#titulo {
+  text-align: center;
+}
+
 /* ------- Footer style ------- */
 footer {
   background: var(--bg-black);
